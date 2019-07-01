@@ -3,11 +3,14 @@ ChrisXF\SyliusArticleNumbersPlugin\Entity\ProductVariant:
     table: sylius_product_variant
     fields:
         articleNumber:
+            column: article_number_generic
             type: string
             nullable: true
         ean:
+            column: article_number_ean
             type: string
             nullable: true
         upc:
+            column: article_number_upc
             type: string
             nullable: true
