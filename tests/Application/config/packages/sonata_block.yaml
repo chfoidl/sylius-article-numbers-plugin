@@ -1,0 +1,3 @@
+sonata_block:
+    blocks:
+        chrisxf_sylius_article_numbers_plugin.block.service.product_article_number: ~

@@ -1,0 +1,6 @@
+chrisxf_sylius_article_numbers_plugin:
+    ui:
+        article_numbers: Article Numbers
+        article_number: Article Number
+        ean: EAN
+        upc: UPC

@@ -1,0 +1,18 @@
+{% extends sonata_block.templates.block_base %}
+
+{% block block %}
+    {% if form %}
+    <div class="ui hidden divider"></div>
+    <div class="ui two column stackable grid">
+        <div class="column">
+            <div class="ui segment">
+                <h4 class="ui dividing header">{{ 'chrisxf_sylius_article_numbers_plugin.ui.article_numbers'|trans }}</h4>
+                {{ form_row(form.articleNumber) }}
+                {{ form_row(form.ean) }}
+                {{ form_row(form.upc) }}
+            </div>
+        </div>
+    </div>
+    {% endif %}
+{% endblock %}
+

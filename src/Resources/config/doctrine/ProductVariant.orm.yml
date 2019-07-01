@@ -1,0 +1,13 @@
+ChrisXF\SyliusArticleNumbersPlugin\Entity\ProductVariant:
+    type: entity
+    table: sylius_product_variant
+    fields:
+        articleNumber:
+            type: string
+            nullable: true
+        ean:
+            type: string
+            nullable: true
+        upc:
+            type: string
+            nullable: true

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<container xmlns="http://symfony.com/schema/dic/services" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+    <services>
+	<service id="chrisxf.sylius_article_numbers_plugin.form.extension.type.product_variant" class="ChrisXF\SyliusArticleNumbersPlugin\Form\Extension\ProductVariantTypeExtension">
+            <tag name="form.type_extension" extended-type="Sylius\Bundle\ProductBundle\Form\Type\ProductVariantType" />
+	</service>
+
+	<service id="chrisxf.sylius_article_numbers_plugin.event.product_variant_article_numbers" class="ChrisXF\SyliusArticleNumbersPlugin\Event\ProductVariantArticleNumbers">
+            <tag name="kernel.event_listener" event="sonata.block.event.sylius.admin.product.create.tab_details" method="onBlock" />
+            <tag name="kernel.event_listener" event="sonata.block.event.sylius.admin.product.update.tab_details" method="onBlock" />
+            <tag name="kernel.event_listener" event="sonata.block.event.sylius.admin.product_variant.create.tab_details" method="onBlock" />
+            <tag name="kernel.event_listener" event="sonata.block.event.sylius.admin.product_variant.update.tab_details" method="onBlock" />
+	</service>
+
+	<service id="chrisxf.sylius_article_numbers_plugin.block.service.product_variant_article_numbers" class="ChrisXF\SyliusArticleNumbersPlugin\Block\ProductVariantArticleNumbersBlockService">
+            <tag name="sonata.block" />
+	    <argument>chrisxf.sylius_article_numbers_plugin.block.service.product_variant_article_numbers</argument>
+	    <argument type="service" id="templating" />
+	</service>
+    </services>
+</container>
